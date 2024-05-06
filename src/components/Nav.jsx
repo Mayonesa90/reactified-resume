@@ -13,15 +13,15 @@ export default function Nav({position, highlightAbout, highlightPortfolio, highl
         </div>
         </header>
         </Link>
-        <ul className={`font-inria-sans text-2xl col-start-2 ${position} text-right grid gap-y-3 mt-5`}>
+        <ul className={`font-inria-sans text-2xl col-start-2 ${position} text-right grid gap-y-3 mt-4`}>
             <li>
-                <Link to="/about" className={`${highlightAbout} h-8 inline-block pl-2 hover:bg-highlight-link `}>about</Link>
+                <Link to="/about" className={`${highlightAbout} h-8 inline-block pl-2 pr-6 hover:bg-highlight-link `}>about</Link>
             </li>
             <li>
-                <Link to="/portfolio" className={`${highlightPortfolio} h-8 inline-block pl-2 hover:bg-highlight-link `}>portfolio</Link>
+                <Link to="/portfolio" className={`${highlightPortfolio} h-8 inline-block pl-2 pr-6 hover:bg-highlight-link `}>portfolio</Link>
             </li>
             <li>
-                <Link to="/contact" className={`${highlightContact} h-8 inline-block pl-2 hover:bg-highlight-link `}>contact</Link>
+                <Link to="/contact" className={`${highlightContact} h-8 inline-block pl-2 pr-6 hover:bg-highlight-link `}>contact</Link>
             </li>
         </ul>
     </header>

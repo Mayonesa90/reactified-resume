@@ -10,10 +10,10 @@ function App() {
     <>
       <Router>
         <Routes>
-            <Route path="/" element={ <Landing /> }/>
-            <Route path="/about" element={ <About /> }/>
-            <Route path="/portfolio" element={ <Portfolio /> }/>
-            <Route path="/contact" element={ <Contact /> }/>
+            <Route path="/" element={ <Landing position={'row-start-2'}/> }/>
+            <Route path="/about" element={ <About position={'row-start-1'} highlightAbout={'bg-highlight-link'}/> }/>
+            <Route path="/portfolio" element={ <Portfolio position={'row-start-1'} highlightPortfolio={'bg-highlight-link'}/> }/>
+            <Route path="/contact" element={ <Contact position={'row-start-1'} highlightContact={'bg-highlight-link'}/> }/>
         </Routes>
         </Router>
       

@@ -1,9 +1,9 @@
 import Nav from "../components/Nav"
 
-export default function Landing() {
+export default function Landing({position}) {
     return (
         <>
-            <Nav />
+            <Nav position={position}/>
         </>
     )
 }

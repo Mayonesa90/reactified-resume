@@ -1,12 +1,22 @@
-// import './App.css'
-import Header from './components/Header'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Landing from './pages/Landing';
+import About from './pages/About';
+import Portfolio from './pages/Portfolio';
+import Contact from './pages/Contact';
 
 function App() {
 
   return (
     <>
-      <h1 className='text-lg text-pink-500'>This is App</h1>
-      <Header/>
+      <Router>
+        <Routes>
+            <Route path="/" element={ <Landing /> }/>
+            <Route path="/about" element={ <About /> }/>
+            <Route path="/portfolio" element={ <Portfolio /> }/>
+            <Route path="/contact" element={ <Contact /> }/>
+        </Routes>
+        </Router>
+      
     </>
   )
 }

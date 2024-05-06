@@ -1,6 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* @import "@animxyz/core";
+@include xyz-all;
+@include xyz-core;
+@include xyz-utilities; */
 
 @layer base {
   @font-face {
@@ -46,4 +50,8 @@
   font-family: "Inria Sans", sans-serif;
   font-weight: 700;
   font-style: italic;
+}
+
+body > div {
+  height: 100vh;
 }

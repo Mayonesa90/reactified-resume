@@ -1,9 +1,9 @@
 import Nav from "../components/Nav";
 
-export default function Portfolio({position, highlightPortfolio}){
+export default function Portfolio({highlightPortfolio}){
     return (
         <>  
-            {/* <Nav position={position} highlightPortfolio={highlightPortfolio}/> */}
+            <Nav highlightPortfolio={highlightPortfolio} pathLanding="/" pathAbout="/about" pathPortfolio="/portfolio" pathContact="/contact" />
             <h1>I'm Portfolio</h1>
         </>
         

@@ -1,13 +1,16 @@
 import Nav from "../components/Nav"
+import { XyzTransition } from '@animxyz/react'
 
 
-export default function About({position, highlightAbout}){
+export default function About({highlightAbout}){
     return (
 
-            <main>
-            {/* <Nav position={position} highlightAbout={highlightAbout}/> */}
-            <h1>I'm About</h1>
-            </main>
+            <XyzTransition         
+            appear
+            xyz="fade in-left-100% out-right-100%"
+            mode="out-in">
+            <Nav highlightAbout={highlightAbout}/>
+            </XyzTransition>
 
     )
 }

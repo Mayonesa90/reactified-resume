@@ -1,9 +1,9 @@
 import Nav from "../components/Nav";
 
-export default function Contact({position, highlightContact}){
+export default function Contact({highlightContact}){
     return (
         <>
-        {/* <Nav position={position} highlightContact={highlightContact}/> */}
+        <Nav highlightContact={highlightContact}/>
         <h1>I'm Contact</h1>
         </>
     )

@@ -49,7 +49,6 @@ export default function ContactForm(){
                 <section className="grid">
                 <label htmlFor="message"  className="text-xs">MESSAGE</label>
                     <textarea 
-                        type="text"
                         onChange={handleChange}
                         name="message"
                         id="message"

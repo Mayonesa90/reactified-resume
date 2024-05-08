@@ -5,7 +5,10 @@ export default function Contact({highlightContact}){
     return (
         <>
         <Nav highlightContact={highlightContact}/>
-        <ContactForm />
+        <main >
+            <ContactForm />
+        </main>
+        
         </>
     )
 }

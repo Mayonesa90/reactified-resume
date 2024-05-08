@@ -54,4 +54,11 @@
 
 body > div {
   height: 100vh;
+  display:flex;
+  flex-direction: column;
+}
+
+main {
+    height: 100vh;
+    align-content: center;
 }

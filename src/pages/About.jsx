@@ -7,7 +7,8 @@ export default function About({highlightAbout}){
         <>
         <Nav highlightAbout={highlightAbout}/>
         <main className="mx-auto">
-            <h2>I'm About</h2>
+            <h2>Who am I?</h2>
+            <p>Optimistic, tired, creative.</p>
         </main>
         </>
 

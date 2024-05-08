@@ -20,9 +20,16 @@ export default function ContactForm(){
         })
     }
 
+    function handleSubmit(event) {
+        event.preventDefault()
+        console.log(formData)
+    }
+
     return (
         <>
-            <form className="border border-solid border-black rounded-lg flex flex-col max-w-fit p-7 gap-5 mx-auto">
+            <form
+                onSubmit={handleSubmit} 
+                className="shadow-md shadow-moon rounded-lg flex flex-col max-w-fit p-7 gap-5 mx-auto">
                 <h2 className="text-center font-bold text-xl">Say hi!</h2>
                 <section className="grid">
                     <label htmlFor="name" className="text-xs">NAME:</label>
@@ -32,7 +39,7 @@ export default function ContactForm(){
                         name="name"
                         id="name"
                         value={formData.name}
-                        className="border border-black rounded-md"
+                        className="border border-black rounded-md p-2"
                     />
                 </section>
                 <section className="grid">
@@ -43,19 +50,20 @@ export default function ContactForm(){
                         name="email"
                         id="email"
                         value={formData.email}
-                        className="border border-black rounded-md"
+                        className="border border-black rounded-md p-2"
                     />
                 </section>
                 <section className="grid">
-                <label htmlFor="message"  className="text-xs">MESSAGE</label>
+                <label htmlFor="message"  className="text-xs">MESSAGE:</label>
                     <textarea 
                         onChange={handleChange}
                         name="message"
                         id="message"
                         value={formData.message}
-                        className="border border-black rounded-md"
+                        className="border border-black rounded-md p-2"
                     />
                 </section>
+                <button className=" bg-highlight-h1 shadow-md shadow-moon rounded-lg py-2 text-xs hover:bg-dm-highlight-link">SEND</button>
             </form>
         </>
     

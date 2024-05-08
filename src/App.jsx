@@ -1,6 +1,5 @@
 import { Link, Routes, Route, useLocation } from 'react-router-dom';
 import '@animxyz/react'
-import { XyzTransition } from "@animxyz/react";
 
 import Landing from './pages/Landing';
 import About from './pages/About';

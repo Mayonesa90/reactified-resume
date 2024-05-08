@@ -17,8 +17,8 @@ export default function FetchData(){
         <section className=" max-h-screen">
             <ul>
                 {repos.map(repo => (
-                    <li key={repo.id}>
-                        <a href={repo.html_url}>{repo.name}</a>
+                    <li key={repo.id} className="p-2 hover:shadow-md hover:shadow-moon">
+                        <a href={repo.html_url} >{repo.name}</a>
                     </li>
                 ))}
             </ul>

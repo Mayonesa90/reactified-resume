@@ -39,7 +39,7 @@ export default function ContactForm(){
                         name="name"
                         id="name"
                         value={formData.name}
-                        className="border border-black rounded-md p-2"
+                        className=" shadow-inner shadow-moon rounded-md p-2"
                     />
                 </section>
                 <section className="grid">
@@ -50,7 +50,7 @@ export default function ContactForm(){
                         name="email"
                         id="email"
                         value={formData.email}
-                        className="border border-black rounded-md p-2"
+                        className="shadow-inner shadow-moon rounded-md p-2"
                     />
                 </section>
                 <section className="grid">
@@ -60,7 +60,7 @@ export default function ContactForm(){
                         name="message"
                         id="message"
                         value={formData.message}
-                        className="border border-black rounded-md p-2"
+                        className="shadow-inner shadow-moon rounded-md p-2"
                     />
                 </section>
                 <button className=" bg-highlight-h1 shadow-md shadow-moon rounded-lg py-2 text-xs hover:bg-dm-highlight-link">SEND</button>

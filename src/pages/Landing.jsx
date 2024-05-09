@@ -1,9 +1,9 @@
 import Nav from "../components/Nav"
 
-export default function Landing() {
+export default function Landing({toggleDarkMode, toggleBtn}) {
     return (
         <main className=" h-full grid content-center">
-            <Nav/>
+            <Nav toggleDarkMode={toggleDarkMode} toggleBtn={toggleBtn}/>
         </main>
     )
 }

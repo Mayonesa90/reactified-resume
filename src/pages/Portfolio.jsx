@@ -1,13 +1,15 @@
 import FetchData from "../components/FetchData";
 import Nav from "../components/Nav";
 
-export default function Portfolio({highlightPortfolio}){
+export default function Portfolio({highlightPortfolio, toggleDarkMode, toggleBtn}){
     return (
         <>  
-            <Nav highlightPortfolio={highlightPortfolio} />
-            <main className="mx-auto">
-                <h2 className=" text-3xl">Repos from Github</h2>
+            <Nav highlightPortfolio={highlightPortfolio} toggleDarkMode={toggleDarkMode} toggleBtn={toggleBtn}/>
+            <main className="mx-auto overflow-scroll text-center">
+                <h2 className=" text-3xl ">Repositories</h2>
+                <h3 className="mb-7">from GitHub</h3>
                 <FetchData />
+                
             </main>
             
         </>

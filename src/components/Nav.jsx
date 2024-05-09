@@ -1,13 +1,22 @@
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom"
-import { useRef } from "react"
+import { useState } from "react"
+import ToggleBtnLm from "../assets/toggle-lm.svg"
+import ToggleBtnDm from "../assets/toggle-dm.svg"
 
-export default function Nav({position, highlightAbout, highlightPortfolio, highlightContact}){
+
+export default function Nav({toggleDarkMode, toggleBtn, position, highlightAbout, highlightPortfolio, highlightContact}){
     
+
     
     return (
-    <header className="grid grid-cols-2 mt-8 mb-8 z-10">  
+    <>
+    <button>
+    <img src={toggleBtn} onClick={toggleDarkMode} alt="" className="absolute right-2 top-2" />
+    </button> 
+    <header className="grid grid-cols-2 mt-8 mb-8 z-10 top-8 sticky">
+         
         <Link to="/">
-            <header className="relative w-56">
+            <header className="relative w-56 ">
                 <h1 className=" pl-6 font-inria-sans font-light text-5xl text-wrap z-10 w-56 relative">mayaArza<br></br>paloBjörk<br></br>lund</h1>
                 <div className="flex flex-col gap-4 top-0 w-56 absolute z-0  mt-4">
                     <div className=" bg-highlight-h1 h-8 shadow-md shadow-moon"></div>
@@ -28,5 +37,6 @@ export default function Nav({position, highlightAbout, highlightPortfolio, highl
             </li>
         </ul>
     </header>
+    </>
     )
 }

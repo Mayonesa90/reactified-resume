@@ -14,10 +14,13 @@ function App() {
   
   const [darkMode, setDarkMode] = useState(false)
   const [toggleBtn, setToggleBtn] = useState(ToggleBtnLm)
+  const [highLight, setHighLight] = useState('bg-highlight-link')
 
   function toggleDarkMode(){
-      setDarkMode(prev => !prev)
-      setToggleBtn(darkMode ? ToggleBtnDm : ToggleBtnLm)
+      setDarkMode(!darkMode)
+      setToggleBtn(darkMode ? ToggleBtnLm : ToggleBtnDm)
+      document.body.classList.toggle("dark")
+      setHighLight(darkMode ? "bg-highlight-link" : "bg-dm-highlight-link")
   }
 
   return (
@@ -25,9 +28,9 @@ function App() {
             <Route path="/" element={ 
                   <Landing position={'row-start-2'} toggleDarkMode={toggleDarkMode} toggleBtn={toggleBtn}/>
             }/>
-            <Route path="/about" element={ <About toggleDarkMode={toggleDarkMode} toggleBtn={toggleBtn} position={'row-start-1'} highlightAbout={'bg-highlight-link'}/> }/>
-            <Route path="/portfolio" element={ <Portfolio toggleDarkMode={toggleDarkMode} toggleBtn={toggleBtn} position={'row-start-1'} highlightPortfolio={'bg-highlight-link'}/> }/>
-            <Route path="/contact" element={ <Contact toggleDarkMode={toggleDarkMode} toggleBtn={toggleBtn} position={'row-start-1'} highlightContact={'bg-highlight-link'}/> }/>
+            <Route path="/about" element={ <About toggleDarkMode={toggleDarkMode} toggleBtn={toggleBtn} position={'row-start-1'} highlightAbout={highLight}/> }/>
+            <Route path="/portfolio" element={ <Portfolio toggleDarkMode={toggleDarkMode} toggleBtn={toggleBtn} position={'row-start-1'} highlightPortfolio={highLight}/> }/>
+            <Route path="/contact" element={ <Contact toggleDarkMode={toggleDarkMode} toggleBtn={toggleBtn} position={'row-start-1'} highlightContact={highLight}/> }/>
         </Routes>
             
   )

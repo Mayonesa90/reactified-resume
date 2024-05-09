@@ -1,20 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-/* @import "@animxyz/core";
-@include xyz-all;
-@include xyz-core;
-@include xyz-utilities; */
 
-@layer base {
-  @font-face {
-    font-family: "Inria Sans";
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: url("https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Karla:ital,wght@0,200..800;1,200..800&display=swap");
-  }
-}
 
 .inria-sans-light {
   font-family: "Inria Sans", sans-serif;
@@ -53,12 +40,12 @@
 }
 
 body > div {
-  height: 100vh;
-  display:flex;
-  flex-direction: column;
+  display:grid;
+  /* flex-direction: column; */
+  max-height: 100vh;
+  /* overflow: hidden; */
 }
 
-main {
+.wrapper {
     height: 100vh;
-    align-content: center;
 }

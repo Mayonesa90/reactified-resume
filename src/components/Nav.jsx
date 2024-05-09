@@ -10,14 +10,13 @@ export default function Nav({toggleDarkMode, toggleBtn, position, highlightAbout
     
     return (
     <>
-    <button className=" sticky top-2 left-5">
+    <button className="absolute right-3 top-3" alt="toggle dark mode">
         <img src={toggleBtn} onClick={toggleDarkMode} alt=""  />
-    </button> 
-    <header className="grid grid-cols-2 mt-8 mb-8 z-10  top-20 sticky">
-         
+    </button>
+    <header className="grid grid-cols-2 mt-10 mb-8 z-10 sticky font-inriaSans font-thin">
         <Link to="/">
             <header className="relative w-56 ">
-                <h1 className=" pl-6 font-inria-sans font-light text-5xl text-wrap z-10 w-56 relative dark:text-dm-text-color">mayaArza<br></br>paloBjörk<br></br>lund</h1>
+                <h1 className=" pl-6  text-5xl text-wrap z-10 w-56 relative dark:text-dm-text-color">mayaArza<br></br>paloBjörk<br></br>lund</h1>
                 <div className="flex flex-col gap-4 top-0 w-56 absolute z-0  mt-4">
                     <div className=" bg-highlight-h1 dark:bg-dm-highlight-h1 h-8 shadow-md shadow-moon"></div>
                     <div className=" bg-highlight-h1 dark:bg-dm-highlight-h1 h-8 shadow-md shadow-moon"></div>
@@ -51,7 +50,9 @@ export default function Nav({toggleDarkMode, toggleBtn, position, highlightAbout
                 </Link>
             </li>
         </ul>
+    
     </header>
+    
     </>
     )
 }

@@ -12,19 +12,16 @@ export default function FetchData(){
             setRepos(data)
         }
         getRepos()
-        // fetch("https://api.github.com/users/mayonesa90/repos")
-        //     .then(res => res.json())
-        //     .then(data => setRepos(data))
-        //     .catch(error => console.error("Error fetching repos:", error))
+
     }, [])
 
 
     return (
-        <section className=" max-h-screen">
-            <ul className=" ">
+        <section className=" flex flex-col">
+            <ul className=" flex flex-col overflow-scroll">
                 {repos.map(repo => (
                     <li key={repo.id} className="p-2">
-                        <a className=" hover:bg-highlight-h1 p-2 text-xs rounded-sm" href={repo.html_url} >{repo.name.toUpperCase()}</a>
+                        <a className=" hover:bg-highlight-h1 p-2 text-md rounded-sm dark:hover:bg-dm-highlight-link" href={repo.html_url} >{repo.name.toUpperCase()}</a>
                     </li>
                 ))}
             </ul>

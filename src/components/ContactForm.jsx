@@ -29,8 +29,8 @@ export default function ContactForm(){
         <>
             <form
                 onSubmit={handleSubmit} 
-                className="shadow-md shadow-moon rounded-lg flex flex-col max-w-fit p-7 gap-5 mx-auto">
-                <h2 className="text-center font-bold text-xl">Say hi!</h2>
+                className="shadow-md shadow-moon rounded-lg flex flex-col  min-w-96 p-7 gap-5 mx-auto">
+                <h2 className="text-center text-4xl ">Stay in touch!</h2>
                 <section className="grid">
                     <label htmlFor="name" className="text-xs">NAME:</label>
                     <input 
@@ -63,7 +63,7 @@ export default function ContactForm(){
                         className="shadow-inner shadow-moon rounded-md p-2"
                     />
                 </section>
-                <button className=" bg-highlight-h1 shadow-md shadow-moon rounded-lg py-2 text-xs hover:bg-dm-highlight-link">SEND</button>
+                <button className=" bg-highlight-h1 shadow-md shadow-moon h-16 rounded-lg font-extrabold py-2 text-lg hover:bg-dm-highlight-link dark:bg-dm-highlight-link">SEND MESSAGE</button>
             </form>
         </>
     

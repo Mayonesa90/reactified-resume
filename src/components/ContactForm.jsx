@@ -30,7 +30,10 @@ export default function ContactForm(){
             <form
                 onSubmit={handleSubmit} 
                 className="shadow-md shadow-moon rounded-lg flex flex-col  min-w-96 p-7 gap-5 mx-auto">
+                <header>
                 <h2 className="text-center text-4xl ">Stay in touch!</h2>
+                <h3 className="text-center text-xs">( Please don't )</h3>
+                </header>
                 <section className="grid">
                     <label htmlFor="name" className="text-xs">NAME:</label>
                     <input 

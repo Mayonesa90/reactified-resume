@@ -6,19 +6,23 @@ export default function About({position, highlightAbout}){
         <div className="wrapper bg-bg-color dark:bg-dm-bg-color  text-text-color dark:text-dm-text-color font-inriaSans font-thin ">
             <Nav highlightAbout={highlightAbout} position={position}/>
             <main className="text-center self-start">
-                <h2 className="text-4xl mb-5">Introduction</h2>
-                <p className=" max-w-96 mx-auto mb-5">Born in the suburbs of <strong>Stockholm</strong>, Sweden with raises in Peru, South America. 
-                Single <strong>mom</strong> raising a daughter. 
-                Trying to find a balance between strong and soft.
+                <h2 className="text-4xl mb-5">Hello! 👩🏻‍💻</h2>
+                <p className=" max-w-96 mx-auto mb-5">My name is Maya. A plantloving-mom from the suburbs of <strong>Stockholm 🇸🇪</strong></p> 
+                
+                
+                <p className=" max-w-96 mx-auto mb-5">
+                In progress of becoming a <strong className="text-lg">Frontend-developer </strong> 
+                 and enjoying the journey 👩🏻‍🦯
                 </p>
 
                 <p className=" max-w-96 mx-auto mb-5">
-                Taking a leap to change careers and now in progress to become a <strong>Frontend-developer</strong>!
+                <strong className="text-lg">Skills</strong> include: 
+                vanilla javascript, html, css, prototyping in Figma and Adobe inDesign, 
+                Adobe Illustrator, WCAG, git, GitHub, agile workflow and in writning moment 
+                learning React.
                 </p>
 
-                <p className=" max-w-96 mx-auto">
-                Skills include: vanilla javascript, html, css, prototyping in Figma and Adobe inDesign, Adobe Illustrator, WCAG, git, GitHub, agile workflow and in this moment leraning React.
-                </p>
+                <p className="text-xs">Ps. Isn't the moon lovely tonight?</p>
             </main>
         </div>
 

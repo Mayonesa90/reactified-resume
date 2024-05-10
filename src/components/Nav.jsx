@@ -13,7 +13,7 @@ export default function Nav({toggleDarkMode, toggleBtn, position, highlightAbout
     <button className="absolute right-3 top-3" alt="toggle dark mode">
         <img src={toggleBtn} onClick={toggleDarkMode} alt=""  />
     </button>
-    <header className="grid grid-cols-2 mt-10 mb-8 z-10 sticky font-inriaSans font-thin">
+    <header className="grid grid-cols-2 mt-10 mb-8 z-10 sticky font-inriaSans font-thin max-h-max self-start">
         <Link to="/">
             <header className="relative w-56 ">
                 <h1 className=" pl-6  text-5xl text-wrap z-10 w-56 relative dark:text-dm-text-color">mayaArza<br></br>paloBjörk<br></br>lund</h1>

@@ -48,4 +48,5 @@ body > div {
 
 .wrapper {
     height: 100vh;
+    display: grid;
 }

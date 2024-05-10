@@ -2,11 +2,11 @@ import Nav from "../components/Nav"
 import { XyzTransition } from '@animxyz/react'
 
 
-export default function About({highlightAbout, toggleDarkMode, toggleBtn}){
+export default function About({position, highlightAbout, toggleDarkMode, toggleBtn}){
     return (
-        <div className="wrapper bg-bg-color dark:bg-dm-bg-color  text-text-color dark:text-dm-text-color font-inriaSans font-thin">
-            <Nav highlightAbout={highlightAbout} toggleDarkMode={toggleDarkMode} toggleBtn={toggleBtn}/>
-            <main className="text-center">
+        <div className="wrapper bg-bg-color dark:bg-dm-bg-color  text-text-color dark:text-dm-text-color font-inriaSans font-thin grid">
+            <Nav highlightAbout={highlightAbout} toggleDarkMode={toggleDarkMode} toggleBtn={toggleBtn} position={position}/>
+            <main className="text-center self-start">
                 <h2 className="text-4xl mb-5">Introduction</h2>
                 <p className=" max-w-96 mx-auto mb-5">Born in the suburbs of <strong>Stockholm</strong>, Sweden with raises in Peru, South America. 
                 Single <strong>mom</strong> raising a daughter. 

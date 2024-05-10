@@ -1,8 +1,7 @@
 import Nav from "../components/Nav"
-import { XyzTransition } from '@animxyz/react'
-
 
 export default function About({position, highlightAbout}){
+
     return (
         <div className="wrapper bg-bg-color dark:bg-dm-bg-color  text-text-color dark:text-dm-text-color font-inriaSans font-thin ">
             <Nav highlightAbout={highlightAbout} position={position}/>

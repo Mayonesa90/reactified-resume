@@ -3,7 +3,7 @@ import { useState } from "react"
 export default function ContactForm(){
 
 
-    const [formData, setFormData] = useState(
+    const [formData, setFormData] = useState( //Initialized state objects as empty strings
         {
             name: "",
             email: "",
@@ -15,7 +15,7 @@ export default function ContactForm(){
         setFormData(prevFormData => {
             return {
                 ...prevFormData,
-                [event.target.name]: event.target.value
+                [event.target.name]: event.target.value 
             }
         })
     }

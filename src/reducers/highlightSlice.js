@@ -1,17 +1,17 @@
 import { createSlice } from "@reduxjs/toolkit"
 
-export const highlightSlice = createSlice({
+export const highLightSlice = createSlice({
     name: 'highLight',
     initialState: {
         value: 'bg-highlight-link',
     },
     reducers: {
         toggleHighlight(state) {
-            state.value = state.value === 'bg-highlight-link' ? 'bg-highlight-link' : 'bg-dm-highlight-link'
-        }
-    }
+            state.value = state.value === 'bg-highlight-link' ? 'bg-dm-highlight-link' : 'bg-highlight-link';
+        },
+    },
 })
 
-export const {toggleHighlight} = highlightSlice.reducer
+export const {toggleHighlight} = highLightSlice.actions;
 
-export default highlightSlice.reducer
+export default highLightSlice.reducer

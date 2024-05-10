@@ -6,10 +6,10 @@ export default function ToggleBtn({toggleBtn}){
 
     const dispatch = useDispatch();
 
-    function actionCreator(payload) {
+    function actionCreator() {
         return dispatch => {
-            dispatch(toggleDarkMode())
-            dispatch(toggleHighlight())
+            dispatch(toggleDarkMode()) //changes boolean value of darkMode 
+            dispatch(toggleHighlight()) //changes on page highlight color 
         }
     }
 
@@ -19,7 +19,7 @@ export default function ToggleBtn({toggleBtn}){
                 {
                     dispatch(actionCreator())
                 }
-                } alt=""  />
+                } alt="toggle dark mode"  />
         </button>
     )
 }

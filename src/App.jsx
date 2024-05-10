@@ -6,25 +6,12 @@ import Landing from './pages/Landing';
 import About from './pages/About';
 import Portfolio from './pages/Portfolio';
 import Contact from './pages/Contact';
-// import ToggleBtnLm from "./assets/toggle-lm.svg"
-// import ToggleBtnDm from "./assets/toggle-dm.svg"
-// import { toggleHighlight } from './reducers/highlightSlice';
 
 function App() {
 
-  const location = useLocation();
+  const location = useLocation(); //?
 
-  const darkMode = useSelector((state) => state.darkMode.value)
-
-  const highLight = useSelector((state) => state.highLight.value)
-
-  // const [highLight, setHighLight] = useState('bg-highlight-link')
-
-  console.log(highLight)
-  //Actions
-  // function toggleHighLight(){
-  //     setHighLight(darkMode ? "bg-highlight-link" : "bg-dm-highlight-link")
-  // }
+  const highLight = useSelector((state) => state.highLight.value) //returns value (color) of highlight from highlightSlice
 
   return (
         <Routes>

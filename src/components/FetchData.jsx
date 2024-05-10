@@ -5,6 +5,7 @@ export default function FetchData(){
 
     const [repos, setRepos] = useState([])
 
+    //Async function to retrieve repos from Github and save in state above
     useEffect(() => {
         async function getRepos(){
             const res = await fetch("https://api.github.com/users/mayonesa90/repos")

@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom"
-import { useSelector, useDispatch } from "react-redux"
+import { useSelector } from "react-redux"
 import ToggleBtn from "./ToggleBtn";
 import ToggleBtnLm from '../assets/toggle-lm.svg'
 import ToggleBtnDm from '../assets/toggle-dm.svg'
@@ -7,12 +7,12 @@ import ToggleBtnDm from '../assets/toggle-dm.svg'
 
 export default function Nav({ position, highlightAbout, highlightPortfolio, highlightContact}){
     
-    const darkMode = useSelector((state) => state.darkMode.value)
+    const darkMode = useSelector((state) => state.darkMode.value) //Gets value of darkMode 
 
     return (
     <>
-    {darkMode ? <ToggleBtn toggleBtn={ToggleBtnDm} /> : <ToggleBtn toggleBtn={ToggleBtnLm} /> }
-    <header className="grid grid-cols-2 mt-10 mb-8 z-10 sticky font-inriaSans font-thin max-h-max self-start">
+    {darkMode ? <ToggleBtn toggleBtn={ToggleBtnDm} /> : <ToggleBtn toggleBtn={ToggleBtnLm} /> } 
+    <header className="grid grid-cols-2 mt-10 z-10 sticky font-inriaSans font-thin max-h-max self-start">
         <Link to="/">
             <header className="relative w-56 ">
                 <h1 className=" pl-6  text-5xl text-wrap z-10 w-56 relative dark:text-dm-text-color">mayaArza<br></br>paloBjörk<br></br>lund</h1>

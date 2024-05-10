@@ -11,7 +11,7 @@ export default function ContactForm(){
         }
     )
 
-    function handleChange(event){
+    function handleChange(event){ //Saves changes from input fields and sets new states
         setFormData(prevFormData => {
             return {
                 ...prevFormData,
@@ -20,7 +20,7 @@ export default function ContactForm(){
         })
     }
 
-    function handleSubmit(event) {
+    function handleSubmit(event) { //for now only consle logging det form Data
         event.preventDefault()
         console.log(formData)
     }

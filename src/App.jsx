@@ -1,6 +1,5 @@
-import { Routes, Route, useLocation } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import '@animxyz/react'
-import { useState } from "react"
 import { useSelector } from 'react-redux';
 import Landing from './pages/Landing';
 import About from './pages/About';
@@ -8,8 +7,6 @@ import Portfolio from './pages/Portfolio';
 import Contact from './pages/Contact';
 
 function App() {
-
-  const location = useLocation(); //?
 
   const highLight = useSelector((state) => state.highLight.value) //returns value (color) of highlight from highlightSlice
 

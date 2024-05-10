@@ -6,8 +6,6 @@ export default function ToggleBtn({toggleBtn}){
 
     const dispatch = useDispatch();
 
-    //Since I hace two separate functions I need to run with with the button I put 
-    //them together in a function that returns both dispatch actions
     function actionCreator() {
         return dispatch => {
             dispatch(toggleDarkMode()) //changes boolean value of darkMode 

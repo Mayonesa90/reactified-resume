@@ -1,4 +1,4 @@
-import { Link, Routes, Route, useLocation } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import '@animxyz/react'
 import { useState } from "react"
 import Landing from './pages/Landing';

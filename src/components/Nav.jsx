@@ -1,18 +1,30 @@
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom"
 import { useState } from "react"
-import ToggleBtnLm from "../assets/toggle-lm.svg"
-import ToggleBtnDm from "../assets/toggle-dm.svg"
+import { useSelector, useDispatch } from "react-redux"
+import { 
+    darkModeOn,
+    toggleDarkMode, 
+    toggleAsync, 
+    selectThemeValue,
+} from "../reducers/themeSlice"
+// import {store as store} from '../store'
+
+// import ToggleBtnLm from "../assets/toggle-lm.svg"
+// import ToggleBtnDm from "../assets/toggle-dm.svg"
 
 
 export default function Nav({toggleDarkMode, toggleBtn, position, highlightAbout, highlightPortfolio, highlightContact}){
     
-
+    const theme = useSelector(selectThemeValue)
+    const dispatch = useDispatch()
+    const [toggleTheme, setToggledTheme] = useState(false)
     
     return (
     <>
     <button className="absolute right-3 top-3" alt="toggle dark mode">
         <img src={toggleBtn} onClick={toggleDarkMode} alt=""  />
     </button>
+    <button onClick={()=> dispatch(toggleDarkMode())}>Store button</button>
     <header className="grid grid-cols-2 mt-10 mb-8 z-10 sticky font-inriaSans font-thin max-h-max self-start">
         <Link to="/">
             <header className="relative w-56 ">

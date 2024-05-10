@@ -1,9 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
 import themeReducer from '../src/reducers/themeSlice'
+import highlightReducer from '../src/reducers/highlightSlice'
 
 export default configureStore({
     reducer: {
-        toggle: themeReducer,
+        darkMode: themeReducer,
+        highLight: highlightReducer,
     },
 })
 

@@ -1,4 +1,4 @@
-import {createSlice} from '@reduxjs/toolkit'
+import { createSlice } from '@reduxjs/toolkit'
 
 export const themeSlice = createSlice({
     name: 'darkMode',
@@ -6,36 +6,16 @@ export const themeSlice = createSlice({
         value: false,
     },
     reducers: {
-        darkModeOn: (state) => {
-            state.value = !state.value
+        toggleDarkMode(state) {
+            state.value = state.value === false ? true : false;
+            state.value = state.value === true ? document.body.classList.toggle("dark") : document.body.classList.toggle("dark");
         },
-        toggleDarkMode: (state, action) => {
-            state.value = !action.payload
-        }
+    },
 },
-})
+)
 
-export const {darkModeOn, toggleDarkMode} = themeSlice.actions;
-
-//Thunk
-export const toggleAsync = (boolean) => (dispatch) => {
-    setTimeout(() => {
-        dispatch(toggleDarkMode(boolean))
-    }, 1000)
-}
-
-//Selector
-export const selectThemeValue = (state) => state.value
+export const {toggleDarkMode} = themeSlice.actions;
 
 export default themeSlice.reducer
 
-// //Reducer
-// function toggleDarkMode(state = initialState, action) {
-//     if (action.type === 'darkMode/setDarkMode') {
-//         return {
-//             ...state,
-//             value: !state
-//         }
-//     }
-//     return state
-// }
+

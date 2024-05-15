@@ -17,9 +17,8 @@ export default function About({position, highlightAbout}){
 
                 <p className=" max-w-96 mx-auto mb-5">
                 <strong className="text-lg">Skills</strong> include: 
-                vanilla javascript, html, css, prototyping in Figma and Adobe inDesign, 
-                Adobe Illustrator, WCAG, git, GitHub, agile workflow and in writning moment 
-                learning React.
+                vanilla javascript, html, css, prototyping in Figma and Adobe XD, 
+                Adobe Illustrator, WCAG, git, GitHub, agile workflow. I've recently learned the basics of React and now learning Node.js.
                 </p>
 
                 <p className="text-xs">Ps. Isn't the moon lovely tonight?</p>

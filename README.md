@@ -10,7 +10,16 @@
 - **About Page:** Provides a short bio.
 - **Portfolio Page:** Displays GitHub repositories with clickable links.
 - **Contact Page:** Contains a form (currently logs input data to the console).
-- **Dark Mode:** Toggle enabled by the moon button, managed by Redux.
+
+### React Hooks
+**useEffect** is used to perform an asynchronous operation (fetching data from the GitHub API) when the component mounts. It runs the fetch operation once, preventing unnecessary re-fetching and ensures the state is updated with the fetched data.
+
+**useState** is used to manage state for the list of repositories fetched from GitHub on the Portfolio page. It is used because it reactively updates the UI when the state changes. It was also used to manage the state of the form data dynamically on the Contact page.
+
+### React Redux Hooks
+**useSelector** and **useDispatch** are used to manage the dark mode feature, providing an action (which useDispatch is used to trigger) to toggle the dark mode state and a reducer to handle the state change (which useSelector is used to keep track of in the Nav). 
+
+The hooks are also used to make sure the highlighted-nav-title-background is the correct color when switching modes. Since I used props to make the highlight only appear on the current page I had to make sure it's state was accessible and could switch state when darkmode was enabled.
 
 ### Motivation and Learning Outcomes
 
